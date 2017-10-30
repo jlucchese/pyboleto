@@ -192,7 +192,7 @@ def print_santander():
             ]
         listaDadosSantander.append(d)
 
-    # Caixa Formato normal - uma pagina por folha A4
+    # Santander Formato normal - uma pagina por folha A4
     boleto = BoletoPDF('boleto-santander-formato-normal-teste.pdf')
     for i in range(len(listaDadosSantander)):
         boleto.drawBoleto(listaDadosSantander[i])
@@ -236,7 +236,7 @@ def print_caixa():
             ]
         listaDadosCaixa.append(d)
 
-    # Caixa Formato normal - uma pagina por folha A4
+    # Caixa Formato carnê - uma pagina por folha A4
     boleto = BoletoPDF('boleto-caixa-formato-carne-teste.pdf', True)
     for i in range(0, len(listaDadosCaixa), 2):
         boleto.drawBoletoCarneDuplo(
